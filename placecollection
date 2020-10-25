@@ -1,0 +1,37 @@
+# Create your PlaceCollection class in this file
+
+from places import Place
+FILENAME = "visitList.csv"
+
+class PlaceCollection:
+    def __int__(self,name):
+        self.name = name
+        self.places = []
+
+    def load_places(self):
+        inputFile = open(FILENAME, "r")
+        for places in inputFile:
+            parts = places.strip().split(',')
+            print(parts)
+
+    def save_places(self):
+        inputFile = FILENAME
+        inputFile.close(FILENAME)
+
+
+    def add_places(self, place):
+        self.places.append(place)
+
+
+    def unvisited_places(self):
+        inputFile = open(FILENAME, "r")
+        for self.places in inputFile:
+            counter = 0
+            if Place.visited == False:
+                counter == (counter + 1)
+
+        print("You have " + str(counter) + "unvisited places")
+
+    def sort_places(self):
+        place_list = []
+        inputFile = open(FILENAME, "r")
